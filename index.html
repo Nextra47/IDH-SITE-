@@ -1270,15 +1270,91 @@
       .hero-ring { display: none; }
     }
     @media (max-width: 600px) {
-      .container { padding: 0 20px; }
-      .nav-inner { padding: 0 20px; overflow-x: auto; }
-      .products-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-stats { gap: 28px; }
-      .hero-ctas { flex-direction: column; align-items: flex-start; }
-      .promo-card { padding: 48px 28px; }
-      .promo-disc { top: 20px; right: 20px; }
-      .brands-row { gap: 28px; }
+      .container { padding: 0 16px; }
+      .nav-inner { padding: 0 16px; overflow-x: auto; scrollbar-width: none; }
+      .nav-inner::-webkit-scrollbar { display: none; }
+
+      /* PRODUTOS: 2 colunas */
+      .products-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+      /* ABAS: grade 2×2 em vez de linha cortada */
+      .tabs-wrap { padding: 0 16px; }
+      .tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+      }
+      .tab {
+        border-right: 1px solid var(--border) !important;
+        border-bottom: 1px solid var(--border);
+        padding: 13px 6px;
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        text-align: center;
+      }
+      .tab:nth-child(2n) { border-right: none !important; }
+      .tab:nth-child(3),
+      .tab:nth-child(4) { border-bottom: none; }
+
+      /* HEADER mobile */
+      .header-main { padding: 10px 16px; gap: 10px; }
+      .logo-idh { font-size: 24px; }
+      .logo-sub { font-size: 7px; letter-spacing: 3px; }
+      .hdr-wa span:first-child { display: none; }
+      .hdr-wa { padding: 10px 14px; font-size: 10px; }
+      .hdr-action { font-size: 8.5px; gap: 2px; }
+      .header-actions { gap: 12px; }
+
+      /* HERO mobile */
+      .hero { min-height: auto; padding: 48px 0 40px; }
+      .hero-content { padding: 0 20px; }
+      .hero-h1, .hero-h1-2 { font-size: 36px; }
+      .hero-p { font-size: 13px; }
+      .hero-stats { gap: 22px; margin-top: 40px; flex-wrap: wrap; }
+      .stat-num { font-size: 28px; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .btn-gold, .btn-ghost { padding: 13px 28px; font-size: 10px; }
+
+      /* CATEGORIAS: 2 colunas */
+      .categories-grid { grid-template-columns: 1fr 1fr; }
+      .new-mats-grid { grid-template-columns: 1fr; }
+      .new-mats-grid .cat-card { aspect-ratio: 16/7; }
+
+      /* PROMOS */
+      .promo-card { padding: 48px 24px; min-height: 300px; }
+      .promo-disc { top: 18px; right: 24px; width: 76px; height: 76px; }
+      .promo-disc-pct { font-size: 26px; }
+      .promo-h2 { font-size: 28px; }
+
+      /* FOOTER */
+      .footer-grid { grid-template-columns: 1fr; padding: 40px 20px 28px; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; padding: 16px 20px; }
+      .pay-methods { flex-wrap: wrap; justify-content: center; }
+
+      /* BRANDS */
+      .brands-row { gap: 24px; }
+      .brand { font-size: 16px; }
+
+      /* BARRA TOPO */
+      .top-bar { font-size: 9px; letter-spacing: 1.5px; padding: 8px 12px; }
+
+      /* BENEFÍCIOS */
+      .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .benefit { padding: 14px 12px; gap: 10px; }
+      .benefit-ico { width: 34px; height: 34px; font-size: 16px; }
+      .benefit-txt strong { font-size: 11px; }
+      .benefit-txt span { font-size: 10px; }
+
+      /* CART SIDEBAR */
+      .cart-sidebar { width: 100%; right: -100%; }
+      .cart-sidebar.open { right: 0; }
+
+      /* FLOAT WA */
+      .float-wa { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 22px; }
+
+      /* SEC */
+      .sec { padding: 56px 0; }
+      .sec-h2 { font-size: 30px; }
     }
   </style>
 </head>
